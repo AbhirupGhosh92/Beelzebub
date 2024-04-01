@@ -1,5 +1,4 @@
 import { AuthRepository } from "@/repository/AuthRepository";
-import { promises } from "dns";
 import { UserCredential } from "firebase/auth";
 
 
@@ -11,8 +10,8 @@ export class AuthUseCase{
         this.repository = repository
     }
 
-    login():Promise<UserCredential>{
-       return this.repository.loginWithGoogle()
+    async login():Promise<UserCredential> {
+       return await this.repository.loginWithGoogle()
     }
 
     logout():Promises<void>

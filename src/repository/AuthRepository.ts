@@ -15,7 +15,7 @@ export class AuthRepositoryImpl implements AuthRepository{
     
     private firebase : Firebase  = Firebase.getInstance()
     private provider = new GoogleAuthProvider();
-    private getAuth(): Auth {
+    getAuth(): Auth {
         return this.firebase.getAuth()
     }
     loginWithGoogle(): Promise<UserCredential> {

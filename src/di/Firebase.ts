@@ -2,7 +2,7 @@
 import { FirebaseApp, initializeApp } from "firebase/app";
 import { Auth, getAuth } from "firebase/auth";
 import { Database,getDatabase } from "firebase/database";
-import {Utils} from "../utils.js"
+import {Utils} from "../utils"
 import { FieldPath } from "firebase/firestore";
 
 
