@@ -6,20 +6,17 @@ import HeaderBar from "../components/HeaderBar";
 import { AuthRepositoryImpl } from "@/repository/AuthRepository";
 import { AuthUseCase } from "@/usecase/AuthUseCase";
 import { useRef, useEffect } from "react";
+import { MainViewModel } from "./MainViewModel";
 
 export default function Home() {
 
   let loggedIn = useRef(false)
-  const usecase = new AuthUseCase(new AuthRepositoryImpl())
+  let popupShown = useRef(false)
+  const viewModel = new MainViewModel()
 
   useEffect(() => {
-      
-      if(!loggedIn){
-          usecase.login().then((cred) => {
-              loggedIn.current = !loggedIn.current
-          })
-      }
-  })
+      viewModel.startup()
+  },[])
 
   return (
     <div>

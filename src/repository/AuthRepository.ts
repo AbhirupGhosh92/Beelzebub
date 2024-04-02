@@ -1,5 +1,5 @@
 import { Firebase } from "@/di/Firebase";
-import { Auth, GoogleAuthProvider, UserCredential, signInWithPopup, signOut } from "firebase/auth";
+import { Auth, GoogleAuthProvider, UserCredential, signInWithPopup, signInWithRedirect,signOut } from "firebase/auth";
 
 export interface AuthRepository{
     

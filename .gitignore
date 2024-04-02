@@ -37,3 +37,6 @@ next-env.d.ts
 
 #firebase Config
 firebaseConfig.js
+
+#other config
+/.vscode

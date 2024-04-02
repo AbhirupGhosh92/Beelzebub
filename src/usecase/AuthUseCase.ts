@@ -1,4 +1,5 @@
 import { AuthRepository } from "@/repository/AuthRepository";
+import { LocalStorageRepo } from "@/repository/LocalStorageRepo";
 import { UserCredential } from "firebase/auth";
 
 
@@ -11,7 +12,7 @@ export class AuthUseCase{
     }
 
     async login():Promise<UserCredential> {
-       return await this.repository.loginWithGoogle()
+       return this.repository.loginWithGoogle()
     }
 
     logout():Promises<void>
