@@ -1,7 +1,7 @@
 "use client"
 
 import Home from "./home/Home";
-import ReduxProvider from "@/lib/redux-provider";
+import ReduxProvider from "@/redux/redux-provider";
 
 export default function LandingPage() {
 
