@@ -1,9 +1,13 @@
+
+"use client"
+
 import Image from "next/image";
-import HeaderBar from "@/components/HeaderBar";
 import { AuthRepositoryImpl } from "@/repository/AuthRepository";
 import { AuthUseCase } from "@/usecase/AuthUseCase";
 import { useRef, useEffect } from "react";
 import { MainViewModel } from "../MainViewModel";
+import HeaderBar from "@/components/HeaderBar";
+
 
 export default function Home() {
 
