@@ -4,6 +4,8 @@ import { LocalStorageRepoImpl } from "@/repository/LocalStorageRepo";
 import { AuthUseCase } from "@/usecase/AuthUseCase";
 import { LocalStorageUseCase } from "@/usecase/LocalStorageUseCase";
 import { useRef } from "react";
+import { setUser,signout } from "@/redux/home/homeSlice";
+import { useAppDispatch } from "@/redux/store";
 
 export class MainViewModel{
     private useCase : AuthUseCase
@@ -13,9 +15,12 @@ export class MainViewModel{
         this.localUseCase = new LocalStorageUseCase(new LocalStorageRepoImpl())
     }
 
+
+    
+
     private showPopup = useRef(false)
     private isLoggedInRef = useRef(false)
-
+    private dispatch = useAppDispatch();
     
     private async checkLoggedIn()
     {
@@ -25,7 +30,16 @@ export class MainViewModel{
        }
        else{
         this.isLoggedInRef.current = true
+        this.dispatch(setUser(JSON.parse(status)))
        }
+    }
+
+    async signout()
+    {
+        await this.useCase.logout()
+        this.localUseCase.clear()
+        this.dispatch(signout(null))
+        location.reload()
     }
     
     login()
@@ -34,6 +48,7 @@ export class MainViewModel{
         this.useCase.login().then((creds) => {
             this.showPopup.current = false
             this.localUseCase.setData(USER_CREDS,JSON.stringify(creds))
+            this.dispatch(setUser(creds))
         })
         .catch((e) => {
             console.error(e)
@@ -47,5 +62,6 @@ export class MainViewModel{
         {
             this.login()
         }
+
     }
 }
