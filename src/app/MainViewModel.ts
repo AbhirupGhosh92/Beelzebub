@@ -4,7 +4,7 @@ import { LocalStorageRepoImpl } from "@/repository/LocalStorageRepo";
 import { AuthUseCase } from "@/usecase/AuthUseCase";
 import { LocalStorageUseCase } from "@/usecase/LocalStorageUseCase";
 import { useRef } from "react";
-import { setUser } from "@/redux/home/homeSlice";
+import { setUser,signout } from "@/redux/home/homeSlice";
 import { useAppDispatch } from "@/redux/store";
 
 export class MainViewModel{
@@ -38,6 +38,7 @@ export class MainViewModel{
     {
         await this.useCase.logout()
         this.localUseCase.clear()
+        this.dispatch(signout(null))
         location.reload()
     }
     

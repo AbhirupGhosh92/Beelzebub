@@ -16,8 +16,11 @@ const homeSlice = createSlice({
     reducers: {
         setUser: (state, action:PayloadAction<UserCredential>) => {
             state.user = action.payload
+        },
+        signout : (state,action:PayloadAction<null>) => {
+            state.user = action.payload
         }
 }})
 
-export const {setUser} = homeSlice.actions;
+export const {setUser,signout} = homeSlice.actions;
 export const homeReducer = homeSlice.reducer

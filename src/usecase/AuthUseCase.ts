@@ -15,7 +15,7 @@ export class AuthUseCase{
        return this.repository.loginWithGoogle()
     }
 
-    logout():Promises<void>
+    logout():Promise<void>
     {
         return this.repository.logout()
     }
