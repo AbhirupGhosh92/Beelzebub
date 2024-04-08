@@ -33,6 +33,13 @@ export class MainViewModel{
         this.dispatch(setUser(JSON.parse(status)))
        }
     }
+
+    async signout()
+    {
+        await this.useCase.logout()
+        this.localUseCase.clear()
+        location.reload()
+    }
     
     login()
     {

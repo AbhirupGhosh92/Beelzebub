@@ -17,7 +17,7 @@ export class AuthUseCase{
 
     logout():Promises<void>
     {
-        return this.logout()
+        return this.repository.logout()
     }
     
 }
