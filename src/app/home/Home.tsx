@@ -12,7 +12,7 @@ import ProfileImage from "@/components/image/ProfileImage";
 import { useAppSelector } from "@/redux/store";
 import Dropdown from "@/components/dropdown/Dropdown";
 import SignInButton from "@/components/buttons/SignInButton";
-import LoggedOutHome from "./LoggedOutHome";
+import LoggedOutHome from "./loggedout/LoggedOutHome";
 
 
 export default function Home() {
