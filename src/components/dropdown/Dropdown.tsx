@@ -37,7 +37,7 @@ export default function Dropdown({viewModel,isVisible,dismissCallback} : Readonl
 
     return(
         isVisible ?
-        <div className="absolute justify-items-stretch z-10 rounded-md mr-8 mt-16 flex w-42 bg-white border-2 border-black shadow-md overflow-clip self-end right-0">
+        <div className="absolute justify-items-stretch z-20 rounded-md mr-8 mt-16 flex w-42 bg-white border-2 border-black shadow-md overflow-clip self-end right-0">
             <ul>{renderedList}</ul>
         </div>
         : <div></div>

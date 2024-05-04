@@ -16,8 +16,8 @@ export default function SectionFourthHome({addeddelay = 0} : Readonly<{addeddela
     const angle = useTransform(scrollYProgress,[0,1],[0,3600])
 
 
-    const header1 = "A great place to show your creative side"
-    const header2 = "A single place where you can express your ideas and let others dive deep into your creative mind"
+    const header1 = "Share with friends all that you have created"
+    const header2 = "You can tah your friends and share with them your creations"
 
 
     return(

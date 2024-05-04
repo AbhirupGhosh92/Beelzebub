@@ -16,8 +16,8 @@ export default function SectionFifthHome({addeddelay = 0} : Readonly<{addeddelay
     const angle = useTransform(scrollYProgress,[0,1],[0,3600])
 
 
-    const header1 = "A great place to show your creative side"
-    const header2 = "A single place where you can express your ideas and let others dive deep into your creative mind"
+    const header1 = "Go wild with your imagination"
+    const header2 = "With the help of our specialised tools you can easily let your imagination run wild"
 
 
     return(

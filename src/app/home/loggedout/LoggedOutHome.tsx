@@ -4,11 +4,11 @@ import SectionSecondHome from "./SectionSecondHome";
 import SectionThirdHome from "./SectionThirdHome";
 import SectionFourthHome from "./SectionFourthHome";
 import SectionFifthHome from "./SectionFifthHome";
+import { useEffect, useRef } from "react";
 
 export default function LoggedOutHome()
 {
 
-    const {scrollY} = useScroll()
     /* Excerpts from gemeni
     Show drafts
 Heading: Binary Banter: Decoding the Digital Deluge, One Blog Post at a Time
@@ -32,7 +32,6 @@ Subheading: We're all about fixing bugs, not catching them (unless they're delic
 Subheading: We're a bunch of tech enthusiasts who believe knowledge is power (and caffeine is fuel).
     
     */
-
     return(
         <div>
         <div className="w-full h-screen bg-pink-500">

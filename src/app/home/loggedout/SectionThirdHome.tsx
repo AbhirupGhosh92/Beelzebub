@@ -16,8 +16,8 @@ export default function SectionThirdHome({addeddelay = 0} : Readonly<{addeddelay
     const angle = useTransform(scrollYProgress,[0,1],[0,3600])
 
 
-    const header1 = "A great place to show your creative side"
-    const header2 = "A single place where you can express your ideas and let others dive deep into your creative mind"
+    const header1 = "Smart suggestions based on your choices and preferences"
+    const header2 = "You will get unique suggestions and summaries based on your preferences"
 
 
     return(
