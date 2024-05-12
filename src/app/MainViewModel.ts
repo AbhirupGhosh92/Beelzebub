@@ -64,4 +64,14 @@ export class MainViewModel{
         }
 
     }
+
+    async autoUpdate()
+    {
+        let status = await this.localUseCase.getData(USER_CREDS,"")
+        if(status.length != 0)
+            {
+                this.isLoggedInRef.current = true
+                this.dispatch(setUser(JSON.parse(status)))
+            }
+    }
 }

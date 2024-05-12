@@ -17,11 +17,24 @@ import LoggedInPage from "./loggedIn/LoggedInPage";
 
 
 export default function Home() {
+  
 
   let loggedIn = useRef(false)
   let popupShown = useRef(false)
   const viewModel = new MainViewModel()
   const userCred  = useAppSelector((state) => state.home.user);
+
+  const isStateLoaded = useRef(false)
+
+  useState(() => {
+    if(typeof window !== 'undefined' && window.localStorage)
+      {
+    viewModel.autoUpdate()
+    isStateLoaded.current = true
+      }
+  })
+
+
 
   const [showProfileMenu,setShowProfileMenu] = useState(false)
 
