@@ -9,9 +9,9 @@ export default function ScribeEditor() {
   const ReactQuill = useMemo(() => dynamic(() => import('react-quill'), { ssr: false }),[]);
 
   return (
-    <div>
+    <div className='w-full pl-5 pr-5 h-full'>
     <ReactQuill
-        className='bg-white text-black'
+        className='bg-white text-black h-full'
       value={editorValue}
       onChange={(value) => setEditorValue(value)}
       modules={{

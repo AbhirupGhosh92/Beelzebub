@@ -1,3 +1,12 @@
-.ql-editor{
-    min-height:200px;
+.ql-container.ql-snow {
+    height: auto;
 }
+.ql-editor {
+    min-height: 150px;
+    overflow-y: scroll;
+}
+  
+.ql-container {
+    overflow-x:auto;
+    height: 300px; /* whatever you what */
+  }
